@@ -1,0 +1,19 @@
+services:
+  incidentlens:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      INCIDENTLENS_DB_PATH: /data/incidentlens.db
+      INCIDENTLENS_ERROR_REPEAT_THRESHOLD: "3"
+      INCIDENTLENS_ERROR_WINDOW_SECONDS: "300"
+    volumes:
+      - incidentlens-data:/data
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health')"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+
+volumes:
+  incidentlens-data:

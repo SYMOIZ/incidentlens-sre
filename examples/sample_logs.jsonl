@@ -1,0 +1,8 @@
+{"timestamp":"2026-10-26T12:00:01Z","level":"INFO","service":"checkout","message":"order accepted"}
+{"timestamp":"2026-10-26T12:00:02Z","level":"ERROR","service":"checkout","message":"payment timeout id=abc12345"}
+{"timestamp":"2026-10-26T12:00:03Z","level":"ERROR","service":"checkout","message":"payment timeout id=def67890"}
+{"timestamp":"2026-10-26T12:00:04Z","level":"ERROR","service":"checkout","message":"payment timeout id=aaa11111"}
+{"timestamp":"2026-10-26T12:00:05Z","level":"ERROR","service":"payments","message":"card declined code=51"}
+{"timestamp":"2026-10-26T12:00:06Z","level":"CRITICAL","service":"auth","message":"token store unreachable"}
+{"timestamp":"2026-10-26T12:00:07Z","level":"CRITICAL","service":"auth","message":"token store unreachable"}
+{"timestamp":"2026-10-26T12:00:08Z","level":"CRITICAL","service":"auth","message":"token store unreachable"}
